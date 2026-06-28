@@ -11,6 +11,7 @@ import {
   X,
 } from "lucide-react";
 import { useState } from "react";
+import profilePhoto from "../assets/profile-photo.png";
 
 const navItems = ["Experience", "Projects", "Skills", "About", "Contact"];
 
@@ -103,10 +104,14 @@ function App() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
           <a
             href="#home"
-            className="grid h-11 w-11 place-items-center rounded-lg bg-ink text-sm font-black text-white shadow-soft"
+            className="block h-11 w-11 overflow-hidden rounded-lg border border-white/70 bg-white shadow-soft transition hover:-translate-y-0.5"
             aria-label="Gudala Saichandu home"
           >
-            GS
+            <img
+              src={profilePhoto}
+              alt="Gudala Saichandu"
+              className="h-full w-full object-cover"
+            />
           </a>
 
           <nav className="hidden items-center gap-7 text-sm font-bold text-graphite md:flex">
