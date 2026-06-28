@@ -6,7 +6,6 @@ import {
   Linkedin,
   Mail,
   Menu,
-  Phone,
   Server,
   Workflow,
   X,
@@ -177,21 +176,12 @@ function App() {
                 Java, Spring Boot, and AWS engineer experienced in microservices, event-driven
                 architecture, workflow automation, and mission-critical backend platforms.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-9 flex">
                 <a
                   href="#experience"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-5 py-3.5 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-teal"
                 >
                   View Experience
-                  <ArrowUpRight size={18} />
-                </a>
-                <a
-                  href="/Saichandu_Gudala_Resume.pdf"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white/80 px-5 py-3.5 text-sm font-black text-ink transition hover:-translate-y-0.5 hover:border-teal"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Download Resume
                   <ArrowUpRight size={18} />
                 </a>
               </div>
@@ -330,10 +320,6 @@ function App() {
               <a className="contact-link bg-ink text-white" href="mailto:saichandugudala1@gmail.com">
                 <Mail size={19} />
                 Email
-              </a>
-              <a className="contact-link" href="tel:+919100527245">
-                <Phone size={19} />
-                Call
               </a>
               <a
                 className="contact-link"

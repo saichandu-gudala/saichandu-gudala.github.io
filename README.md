@@ -19,14 +19,6 @@ npm run dev
 
 Then open the local URL printed by Vite.
 
-## Resume
-
-The resume is included for deployment at:
-
-```text
-public/Saichandu_Gudala_Resume.pdf
-```
-
 ## Build
 
 ```bash
