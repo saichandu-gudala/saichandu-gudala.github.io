@@ -1,6 +1,6 @@
-# React Portfolio Website
+# Gudala Saichandu Portfolio
 
-A free portfolio website built with React, Vite, Tailwind CSS, and Lucide Icons.
+A free portfolio website built with React, Vite, Tailwind CSS, and Lucide Icons. The content is based on the uploaded resume.
 
 ## Tech Stack
 
@@ -18,6 +18,14 @@ npm run dev
 ```
 
 Then open the local URL printed by Vite.
+
+## Resume
+
+The resume is included for deployment at:
+
+```text
+public/Saichandu_Gudala_Resume.pdf
+```
 
 ## Build
 

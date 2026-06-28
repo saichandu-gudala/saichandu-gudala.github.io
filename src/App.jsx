@@ -2,54 +2,97 @@ import {
   ArrowUpRight,
   BriefcaseBusiness,
   Code2,
-  Github,
+  Database,
   Linkedin,
   Mail,
   Menu,
-  Rocket,
+  Phone,
   Server,
-  Sparkles,
+  Workflow,
   X,
 } from "lucide-react";
 import { useState } from "react";
 
-const navItems = ["Projects", "Skills", "About", "Contact"];
+const navItems = ["Experience", "Projects", "Skills", "About", "Contact"];
 
 const projects = [
   {
-    title: "Task Management App",
+    title: "KYC Match Engine",
     description:
-      "A focused dashboard for tracking tasks, filtering status, and keeping project work organized.",
-    stack: ["React", "Local Storage", "Tailwind"],
-    icon: Rocket,
+      "Applicant validation microservice integrating multiple data sources and reducing onboarding processing time by 25%.",
+    stack: ["Java", "Spring Boot", "AWS", "REST APIs"],
+    icon: Server,
   },
   {
-    title: "Weather Dashboard",
+    title: "Workflow Automation Engine",
     description:
-      "A responsive weather interface with location search, forecast cards, and clear condition states.",
-    stack: ["JavaScript", "API", "CSS"],
-    icon: Sparkles,
+      "Activiti BPMN-based workflow orchestration for KYC and document verification across distributed services.",
+    stack: ["Activiti BPMN", "Spring Boot", "Microservices"],
+    icon: Workflow,
   },
   {
-    title: "Portfolio Website",
+    title: "Online Code Compiler",
     description:
-      "This React + Vite portfolio, built for fast loading and free GitHub Pages deployment.",
-    stack: ["React", "Vite", "GitHub Pages"],
+      "Docker-based secure code execution platform enabling containerized compilation and execution of user code.",
+    stack: ["Docker", "Python", "Linux"],
     icon: Code2,
+  },
+  {
+    title: "Banking System in Python",
+    description:
+      "CLI-based banking system simulator supporting transactions, balance tracking, and account operations.",
+    stack: ["Python", "CLI", "Account Operations"],
+    icon: Database,
   },
 ];
 
 const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Vite",
-  "Tailwind CSS",
-  "Node.js",
+  "Java",
+  "Spring Boot",
+  "Spring Data JPA",
+  "Spring Security",
+  "Activiti BPMN",
+  "AWS EC2",
+  "AWS Lambda",
+  "AWS SQS",
+  "AWS SNS",
+  "CloudFormation",
+  "CodePipeline",
+  "PostgreSQL",
+  "DynamoDB",
+  "Redis",
+  "Python",
   "Git",
-  "REST APIs",
-  "Responsive UI",
+  "Docker",
+  "Linux",
+  "RESTful APIs",
+  "Microservices",
+  "Asynchronous Processing",
+];
+
+const experience = [
+  {
+    company: "Credit Saison India Pvt Ltd",
+    role: "Lead Software Engineer",
+    location: "Bangalore",
+    period: "June 2021 to Present",
+    points: [
+      "Designed and maintained scalable Spring Boot microservices deployed through AWS CloudFormation and CodePipeline.",
+      "Implemented event-driven architecture using AWS SQS and Lambda, processing 1M+ events per month.",
+      "Mentored 3 junior engineers, led architecture reviews, and improved code quality through structured reviews.",
+    ],
+  },
+  {
+    company: "Tata Consultancy Services Pvt Ltd",
+    role: "Application Developer",
+    location: "Hyderabad",
+    period: "June 2019 to June 2021",
+    points: [
+      "Built RESTful microservices using Spring Boot and integrated them with enterprise systems and relational databases.",
+      "Deployed Docker-based applications and managed Linux environments for application hosting.",
+      "Automated log analysis and monitoring scripts to reduce debugging and incident resolution time.",
+    ],
+  },
 ];
 
 function App() {
@@ -62,9 +105,9 @@ function App() {
           <a
             href="#home"
             className="grid h-11 w-11 place-items-center rounded-lg bg-ink text-sm font-black text-white shadow-soft"
-            aria-label="Sai Chandu home"
+            aria-label="Gudala Saichandu home"
           >
-            SC
+            GS
           </a>
 
           <nav className="hidden items-center gap-7 text-sm font-bold text-graphite md:flex">
@@ -76,11 +119,11 @@ function App() {
           </nav>
 
           <a
-            href="mailto:hello@example.com"
+            href="mailto:saichandugudala1@gmail.com"
             className="hidden items-center gap-2 rounded-lg bg-ink px-4 py-2.5 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-teal md:inline-flex"
           >
             <Mail size={17} />
-            Hire Me
+            Contact
           </a>
 
           <button
@@ -125,29 +168,31 @@ function App() {
             <div className="max-w-3xl">
               <p className="mb-5 inline-flex items-center gap-2 rounded-lg border border-teal/20 bg-white/75 px-3 py-2 text-xs font-black uppercase text-teal shadow-sm">
                 <BriefcaseBusiness size={16} />
-                React + Vite portfolio ready for GitHub Pages
+                Senior Backend Engineer | 7+ Years
               </p>
               <h1 className="max-w-4xl text-5xl font-black leading-[0.95] tracking-normal text-ink sm:text-6xl lg:text-7xl">
-                Hi, I am Sai Chandu. I build modern web apps.
+                Gudala Saichandu builds scalable backend systems.
               </h1>
               <p className="mt-6 max-w-2xl text-lg font-medium leading-8 text-graphite sm:text-xl">
-                A software developer focused on clean UI, practical projects, and fast websites that
-                are simple to maintain and free to host.
+                Java, Spring Boot, and AWS engineer experienced in microservices, event-driven
+                architecture, workflow automation, and mission-critical backend platforms.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="#projects"
+                  href="#experience"
                   className="inline-flex items-center justify-center gap-2 rounded-lg bg-ink px-5 py-3.5 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-teal"
                 >
-                  View Projects
+                  View Experience
                   <ArrowUpRight size={18} />
                 </a>
                 <a
-                  href="mailto:hello@example.com"
+                  href="/Saichandu_Gudala_Resume.pdf"
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-line bg-white/80 px-5 py-3.5 text-sm font-black text-ink transition hover:-translate-y-0.5 hover:border-teal"
+                  target="_blank"
+                  rel="noreferrer"
                 >
-                  Contact Me
-                  <Mail size={18} />
+                  Download Resume
+                  <ArrowUpRight size={18} />
                 </a>
               </div>
             </div>
@@ -157,9 +202,9 @@ function App() {
         <section className="border-y border-line bg-white">
           <div className="mx-auto grid max-w-7xl grid-cols-1 divide-y divide-line px-5 md:grid-cols-3 md:divide-x md:divide-y-0 lg:px-8">
             {[
-              ["Stack", "React + Vite + Tailwind"],
-              ["Hosting", "GitHub Pages"],
-              ["Domain", "yourname.github.io"],
+              ["Experience", "7+ years"],
+              ["Scale", "1M+ events/month"],
+              ["Impact", "25% faster onboarding"],
             ].map(([label, value]) => (
               <div key={label} className="py-7 md:px-8 first:md:pl-0 last:md:pr-0">
                 <p className="text-xs font-black uppercase text-coral">{label}</p>
@@ -169,10 +214,42 @@ function App() {
           </div>
         </section>
 
+        <section id="experience" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
+          <div className="max-w-2xl">
+            <p className="section-kicker">Experience</p>
+            <h2 className="section-title">Backend systems built for reliability and scale.</h2>
+          </div>
+
+          <div className="mt-10 grid gap-5">
+            {experience.map((job) => (
+              <article key={job.company} className="rounded-lg border border-line bg-white p-6 shadow-sm">
+                <div className="flex flex-col justify-between gap-4 md:flex-row md:items-start">
+                  <div>
+                    <h3 className="text-2xl font-black text-ink">{job.company}</h3>
+                    <p className="mt-1 font-bold text-teal">{job.role}</p>
+                  </div>
+                  <div className="text-left text-sm font-bold text-graphite md:text-right">
+                    <p>{job.location}</p>
+                    <p>{job.period}</p>
+                  </div>
+                </div>
+                <ul className="mt-6 grid gap-3 text-sm font-medium leading-7 text-graphite">
+                  {job.points.map((point) => (
+                    <li key={point} className="flex gap-3">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-coral" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section id="projects" className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-28">
           <div className="max-w-2xl">
             <p className="section-kicker">Projects</p>
-            <h2 className="section-title">Work that shows how I think and build.</h2>
+            <h2 className="section-title">Projects and systems from the resume.</h2>
           </div>
 
           <div className="mt-10 grid gap-5 lg:grid-cols-3">
@@ -210,7 +287,7 @@ function App() {
           <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.75fr_1fr]">
             <div>
               <p className="section-kicker text-amber">Skills</p>
-              <h2 className="section-title text-white">The tools behind the work.</h2>
+              <h2 className="section-title text-white">Java backend, cloud, and distributed systems.</h2>
             </div>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {skills.map((skill) => (
@@ -225,16 +302,20 @@ function App() {
         <section id="about" className="mx-auto grid max-w-7xl gap-10 px-5 py-20 lg:grid-cols-[0.8fr_1fr] lg:px-8 lg:py-28">
           <div>
             <p className="section-kicker">About</p>
-            <h2 className="section-title">A developer who likes useful, polished things.</h2>
+            <h2 className="section-title">Lead engineer with hands-on delivery experience.</h2>
           </div>
           <div className="space-y-5 text-lg font-medium leading-8 text-graphite">
             <p>
-              I am building my portfolio around projects that demonstrate frontend engineering,
-              responsive design, and problem solving with real user flows.
+              I specialize in architecting high-performance backend services using Java, Spring Boot,
+              AWS, PostgreSQL, DynamoDB, Redis, and resilient REST API patterns.
             </p>
             <p>
-              Replace this section with your actual education, certifications, internships,
-              achievements, and the kind of developer role you want.
+              My experience includes KYC systems, document verification workflows, event-driven
+              processing, Docker-based deployments, Linux environments, and mentoring backend teams.
+            </p>
+            <p>
+              Education: B.Tech in Computer Science Engineering from JNTUH College of Engineering
+              Jagitial, 2019.
             </p>
           </div>
         </section>
@@ -243,18 +324,23 @@ function App() {
           <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 lg:flex-row lg:items-center">
             <div>
               <p className="section-kicker">Contact</p>
-              <h2 className="section-title">Let us build your next opportunity page.</h2>
+              <h2 className="section-title">Open to senior backend engineering opportunities.</h2>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <a className="contact-link bg-ink text-white" href="mailto:hello@example.com">
+              <a className="contact-link bg-ink text-white" href="mailto:saichandugudala1@gmail.com">
                 <Mail size={19} />
                 Email
               </a>
-              <a className="contact-link" href="https://github.com/" target="_blank" rel="noreferrer">
-                <Github size={19} />
-                GitHub
+              <a className="contact-link" href="tel:+919100527245">
+                <Phone size={19} />
+                Call
               </a>
-              <a className="contact-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <a
+                className="contact-link"
+                href="https://www.linkedin.com/in/saichandugudala"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <Linkedin size={19} />
                 LinkedIn
               </a>
@@ -265,8 +351,8 @@ function App() {
 
       <footer className="bg-ink px-5 py-7 text-sm font-semibold text-white/70 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 sm:flex-row">
-          <p>Built with React, Vite, Tailwind CSS, and Lucide Icons.</p>
-          <p>Free domain: yourname.github.io</p>
+          <p>Gudala Saichandu - Senior Backend Engineer</p>
+          <p>Java | Spring Boot | AWS | Microservices</p>
         </div>
       </footer>
     </div>
